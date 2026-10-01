@@ -17,7 +17,13 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body id="home">
+<body id="home" class="overflow-hidden">
+
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#0a0c10]">
+        <img src="assets/images/logo/main-logo.png" alt="Maa Manasha EV Loading..." class="h-10 sm:h-12 brightness-0 invert animate-pulse mb-8">
+        <div class="w-12 h-12 border-4 border-white/10 border-t-[#fa1917] rounded-full animate-spin"></div>
+    </div>
 
     <header class="group/header absolute top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent"
         id="main-header">
@@ -984,6 +990,42 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Custom Script -->
     <script src="assets/js/script.js"></script>
+
+    <!-- Preloader Script -->
+    <script>
+        $(window).on('load', function () {
+            // Small delay to ensure the animation fires cleanly
+            setTimeout(function () {
+                const tl = gsap.timeline({
+                    onComplete: function () {
+                        $('#preloader').remove();
+                        $('body').removeClass('overflow-hidden');
+                    }
+                });
+
+                // 1. Fade out the spinner
+                tl.to("#preloader .animate-spin", {
+                    opacity: 0,
+                    scale: 0.5,
+                    duration: 0.3,
+                    ease: "power2.inOut"
+                })
+                // 2. Fade out and slide the logo up
+                .to("#preloader img", {
+                    opacity: 0,
+                    y: -30,
+                    duration: 0.5,
+                    ease: "power2.inOut"
+                }, "-=0.1")
+                // 3. Slide the entire dark preloader background up to reveal the site
+                .to("#preloader", {
+                    yPercent: -100,
+                    duration: 1.2,
+                    ease: "expo.inOut"
+                }, "-=0.1");
+            }, 300);
+        });
+    </script>
 </body>
 
 </html>
