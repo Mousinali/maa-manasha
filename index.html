@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maa Manasha EV | Premium Electric Scooters</title>
+    <meta name="description"
+        content="Explore Maa Manasha EV's range of premium electric scooters. Engineered for tomorrow, redefining motion.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Remix Icon CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body id="home">
+
+    <header class="group/header absolute top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent"
+        id="main-header">
+        <div
+            class="mx-auto grid max-w-[1440px] grid-cols-[1fr_auto] items-center gap-6 sm:w-[calc(100%_-_48px)] py-4 xl:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] sm:pe-0 pe-4">
+            <a class="relative z-[70] flex w-[180px] flex-col items-center text-[#202020] no-underline transition-all duration-300 origin-left group-has-[[aria-expanded=true]]/header:scale-90 sm:group-has-[[aria-expanded=true]]/header:scale-100 xl:w-[210px] group-has-[[aria-expanded=true]]/header:text-white"
+                href="#home" aria-label="Maa Manasha EV home">
+                <img class="block w-auto h-8 transition-all duration-300 group-has-[[aria-expanded=true]]/header:brightness-0 group-has-[[aria-expanded=true]]/header:invert"
+                    src="assets/images/logo/main-logo.png" alt="Maa Manasha EV Logo" title="Maa Manasha EV Logo"
+                    width="5000" height="1159">
+                <span class="mt-[3px] whitespace-nowrap text-xs font-semibold xl:text-base">Maa Manasha EV</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden xl:flex xl:flex-row xl:items-center xl:justify-center xl:gap-1" id="desktop-navigation"
+                aria-label="Desktop navigation">
+                <a class="rounded-full py-2 px-4 text-[15px] font-semibold whitespace-nowrap text-[#202020] no-underline transition-colors hover:bg-gray-100 focus-visible:bg-gray-200"
+                    href="#home" aria-current="page">Home</a>
+                <a class="rounded-full py-2 px-4 text-[15px] font-semibold whitespace-nowrap text-[#202020] no-underline transition-colors hover:bg-gray-100 focus-visible:bg-gray-200"
+                    href="#electric-scooters">Electric Scooters</a>
+                <a class="rounded-full py-2 px-4 text-[15px] font-semibold whitespace-nowrap text-[#202020] no-underline transition-colors hover:bg-gray-100 focus-visible:bg-gray-200"
+                    href="#about-us">About Us</a>
+                <a class="rounded-full py-2 px-4 text-[15px] font-semibold whitespace-nowrap text-[#202020] no-underline transition-colors hover:bg-gray-100 focus-visible:bg-gray-200"
+                    href="#services">Services</a>
+                <a class="rounded-full py-2 px-4 text-[15px] font-semibold whitespace-nowrap text-[#202020] no-underline transition-colors hover:bg-gray-100 focus-visible:bg-gray-200"
+                    href="#service-booking">Service Booking</a>
+            </nav>
+
+            <div class="flex items-center justify-end gap-3.5 relative z-[70]">
+                <a class="hidden min-h-11 items-center justify-center rounded-full bg-[#fa1917] px-6 text-sm font-bold whitespace-nowrap text-white no-underline transition-colors hover:bg-[#d5100e] sm:inline-flex"
+                    href="#test-drive">Test Drive</a>
+                <button
+                    class="group relative flex h-11 w-11 items-center justify-center border-0 bg-transparent cursor-pointer xl:hidden"
+                    id="nav-toggle" type="button" aria-label="Open menu" aria-controls="mobile-navigation"
+                    aria-expanded="false">
+                    <div class="relative w-6 h-5">
+                        <span
+                            class="absolute left-0 top-0 block h-0.5 w-full rounded-sm bg-[#202020] transition-all duration-300 group-has-[[aria-expanded=true]]/header:bg-white group-aria-expanded:translate-y-2.5 group-aria-expanded:rotate-45"></span>
+                        <span
+                            class="absolute left-0 top-2.5 block h-0.5 w-full rounded-sm bg-[#202020] transition-all duration-300 group-has-[[aria-expanded=true]]/header:bg-white group-aria-expanded:opacity-0"></span>
+                        <span
+                            class="absolute left-0 top-5 block h-0.5 w-full rounded-sm bg-[#202020] transition-all duration-300 group-has-[[aria-expanded=true]]/header:bg-white group-aria-expanded:-translate-y-2.5 group-aria-expanded:-rotate-45"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Offcanvas Navigation (GSAP animated) -->
+        <nav class="fixed inset-0 z-[60] flex-col bg-black xl:hidden overflow-hidden"
+            style="display: none; opacity: 0; visibility: hidden;" id="mobile-navigation"
+            aria-label="Mobile navigation">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0 bg-[url('assets/images/nav/menu-bg.webp')] bg-cover bg-center bg-no-repeat opacity-60 nav-bg"
+                style="transform: scale(1.1);"></div>
+
+            <!-- Scooty Cutout Image -->
+            <img src="assets/images/nav/menu-scooty.webp" alt="Maa Manasha EV Scooter Navigation Menu"
+                title="Maa Manasha EV Scooter Navigation Menu"
+                class="absolute right-[-5%] sm:right-0 bottom-[10%] sm:bottom-0 w-[65%] sm:w-[45%] max-w-[380px] object-contain opacity-100 z-0 nav-scooty"
+                style="transform: translateX(50px); opacity: 0;" loading="lazy">
+
+            <!-- Bottom Gradient for Dark Effect -->
+            <div
+                class="absolute bottom-0 left-0 w-full h-[300px] bg-gradient-to-t from-black via-black/90 to-transparent z-[5] pointer-events-none">
+            </div>
+
+            <div
+                class="relative z-10 w-full h-full flex flex-col pt-24 pb-8 px-6 sm:px-12 overflow-y-auto overflow-x-hidden">
+                <!-- Navigation Links -->
+                <ul class="flex flex-col gap-7 sm:gap-8 mt-2 w-full max-w-[400px]">
+                    <li class="nav-link" style="opacity: 0; transform: translateY(20px);">
+                        <a href="#home" class="flex items-center gap-5 text-[22px] font-bold text-white group">
+                            <i
+                                class="ri-home-4-line text-2xl text-gray-300 group-hover:text-white transition-colors"></i>
+                            <div class="relative pb-1">
+                                Home
+                                <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-[#fa1917] rounded-full"></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-link" style="opacity: 0; transform: translateY(20px);">
+                        <a href="#electric-scooters"
+                            class="flex items-center justify-between text-[22px] font-semibold text-gray-300 hover:text-white transition-colors group w-full">
+                            <div class="flex items-center gap-5">
+                                <i
+                                    class="ri-bike-line text-2xl text-gray-300 group-hover:text-white transition-colors"></i>
+                                Electric Scooters
+                            </div>
+                            <i
+                                class="ri-arrow-right-s-line text-xl text-gray-400 group-hover:text-white transition-colors"></i>
+                        </a>
+                    </li>
+                    <li class="nav-link" style="opacity: 0; transform: translateY(20px);">
+                        <a href="#about-us"
+                            class="flex items-center gap-5 text-[22px] font-semibold text-gray-300 hover:text-white transition-colors group">
+                            <i class="ri-team-line text-2xl text-gray-300 group-hover:text-white transition-colors"></i>
+                            About Us
+                        </a>
+                    </li>
+                    <li class="nav-link" style="opacity: 0; transform: translateY(20px);">
+                        <a href="#services"
+                            class="flex items-center gap-5 text-[22px] font-semibold text-gray-300 hover:text-white transition-colors group">
+                            <i
+                                class="ri-settings-3-line text-2xl text-gray-300 group-hover:text-white transition-colors"></i>
+                            Services
+                        </a>
+                    </li>
+                    <li class="nav-link" style="opacity: 0; transform: translateY(20px);">
+                        <a href="#service-booking"
+                            class="flex items-center gap-5 text-[22px] font-semibold text-gray-300 hover:text-white transition-colors group">
+                            <i
+                                class="ri-calendar-check-line text-2xl text-gray-300 group-hover:text-white transition-colors"></i>
+                            Service Booking
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Headline and Button (Hidden on mobile, visible on tablet) -->
+                <div class="mt-16 sm:mt-24 mb-10 nav-link hidden sm:block"
+                    style="opacity: 0; transform: translateY(20px);">
+                    <p class="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.25em] text-gray-500">Redefining
+                        Motion.</p>
+                    <h2 class="mt-2 text-[32px] sm:text-5xl font-extrabold leading-[1.1] text-white">ENGINEERED<br>FOR
+                        TOMORROW.</h2>
+                    <a href="#test-drive"
+                        class="mt-6 inline-flex h-12 items-center justify-center rounded-full bg-[#ff1616] px-6 text-sm font-bold text-white transition-all hover:bg-red-700 shadow-lg group">
+                        Book a Test Ride <i
+                            class="ri-arrow-right-line ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Footer Section -->
+                <div class="mt-auto pt-6 border-t border-gray-800/80 flex flex-col gap-8 nav-link"
+                    style="opacity: 0; transform: translateY(20px);">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-[500px]">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-900 text-gray-400">
+                                <i class="ri-phone-fill text-lg"></i>
+                            </div>
+                            <div>
+                                <div class="text-[13px] font-bold text-white">Call Us</div>
+                                <div class="text-[11px] text-gray-500 mt-0.5">+91 98765 43210</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-900 text-gray-400">
+                                <i class="ri-map-pin-line text-lg"></i>
+                            </div>
+                            <div>
+                                <div class="text-[13px] font-bold text-white">Find a Dealer</div>
+                                <div class="text-[11px] text-gray-500 mt-0.5">Near You</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-center gap-6 border-t border-gray-800/80 pt-6 pb-2">
+                        <div class="flex gap-4">
+                            <a href="#"
+                                class="flex h-9 w-9 items-center justify-center rounded-full bg-gray-900 text-gray-400 hover:text-white transition-colors"><i
+                                    class="ri-facebook-fill"></i></a>
+                            <a href="#"
+                                class="flex h-9 w-9 items-center justify-center rounded-full bg-gray-900 text-gray-400 hover:text-white transition-colors"><i
+                                    class="ri-instagram-line"></i></a>
+                            <a href="#"
+                                class="flex h-9 w-9 items-center justify-center rounded-full bg-gray-900 text-gray-400 hover:text-white transition-colors"><i
+                                    class="ri-youtube-fill"></i></a>
+                            <a href="#"
+                                class="flex h-9 w-9 items-center justify-center rounded-full bg-gray-900 text-gray-400 hover:text-white transition-colors"><i
+                                    class="ri-linkedin-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <section
+            class="relative isolate overflow-hidden bg-[#f2f3f4] px-4 pb-12 pt-24 text-[#111827] sm:px-8 sm:pb-16 sm:pt-24 lg:pt-28"
+            aria-labelledby="hero-title">
+            <div
+                class="pointer-events-none absolute inset-0 -z-10 bg-[url('assets/images/banner/hero-bg.webp')] bg-cover bg-center bg-no-repeat opacity-20 blur-sm">
+            </div>
+            <div class="mx-auto max-w-[1240px] text-center">
+                <div class="mx-auto max-w-[840px]">
+                    <h1 id="hero-title"
+                        class="text-balance text-2xl sm:text-4xl font-semibold leading-[1.2]  text-[#111827]">
+                        Redefining Motion.<br>Engineered for Tomorrow.</h1>
+                    <p
+                        class="mx-auto mt-5 max-w-[600px] text-balance text-sm leading-6 text-slate-600 sm:mt-6 sm:text-base sm:leading-7">
+                        Explore electric scooters designed to make every ride feel effortless. Find the Ampere that
+                        moves with you.</p>
+                    <!-- Buttons (desktop: top right, mobile: bottom/top center) -->
+                    <div class="mt-8  flex-wrap items-center justify-center gap-3 relative z-10 hidden">
+                        <a href="#test-drive"
+                            class="inline-flex min-h-11 items-center justify-center rounded-full bg-[#fa1917] px-6 text-sm font-bold whitespace-nowrap text-white no-underline shadow-md transition-all hover:bg-[#d5100e] hover:shadow-lg">Book
+                            a Test Ride <i class="ri-arrow-right-line ml-2"></i></a>
+                        <a href="#explore" id="explore-btn"
+                            class="inline-flex min-h-11 items-center justify-center rounded-full border border-gray-300 bg-white px-6 text-sm font-bold whitespace-nowrap text-slate-900 no-underline shadow-sm transition-all hover:bg-gray-50 hover:shadow"><span
+                                id="explore-text">Explore Nexus</span> <i
+                                class="ri-play-circle-line ml-2 text-lg"></i></a>
+                    </div>
+                </div>
+
+                <div class="relative mx-auto mt-6 sm:mt-14 w-full max-w-[1040px]">
+
+
+                    <!-- Stage -->
+                    <div class="relative mx-auto h-[200px] w-full sm:h-[310px] lg:h-[360px]" id="hero-stage"
+                        aria-label="Featured electric scooter">
+                        <div
+                            class="pointer-events-none absolute bottom-[7%] left-1/2 h-[9%] w-[66%] -translate-x-1/2 rounded-full bg-slate-400/20 blur-2xl">
+                        </div>
+                        <img id="hero-image-a"
+                            class="absolute inset-0 h-full w-full object-contain will-change-transform"
+                            src="assets/images/products/nexus/nexus-6.webp" alt="Ampere Nexus Electric Scooter"
+                            title="Ampere Nexus Electric Scooter" width="2400" height="1600" fetchpriority="high">
+                        <img id="hero-image-b"
+                            class="absolute inset-0 h-full w-full object-contain opacity-0 will-change-transform" alt=""
+                            aria-hidden="true">
+                    </div>
+
+                    <!-- Features (desktop: left absolute, mobile: relative flex below) -->
+                    <div
+                        class="mt-8 flex flex-wrap justify-center gap-6 lg:absolute lg:left-0 lg:top-1/2 lg:z-10 lg:mt-0 lg:-translate-y-1/2 lg:flex-col lg:gap-8">
+                        <div class="feature-item flex items-center gap-4 text-left">
+                            <i class="ri-road-map-line text-2xl sm:text-3xl text-slate-800"></i>
+                            <div class="overflow-hidden">
+                                <div class="sm:text-xl text-base font-bold text-slate-900 leading-none lg:text-2xl"
+                                    id="feature-range">136 km</div>
+                                <div class="text-xs text-slate-500 mt-1 lg:text-sm">Range (IDC)</div>
+                            </div>
+                        </div>
+                        <div class="feature-item flex items-center gap-4 text-left">
+                            <i class="ri-speed-up-line text-2xl sm:text-3xl text-slate-800"></i>
+                            <div class="overflow-hidden">
+                                <div class="sm:text-xl text-base font-bold text-slate-900 leading-none lg:text-2xl"
+                                    id="feature-speed">93 km/h</div>
+                                <div class="text-xs text-slate-500 mt-1 lg:text-sm">Top Speed</div>
+                            </div>
+                        </div>
+                        <div class="feature-item flex items-center gap-4 text-left">
+                            <i class="ri-battery-2-charge-line text-2xl sm:text-3xl text-slate-800"></i>
+                            <div class="overflow-hidden">
+                                <div class="sm:text-xl text-base font-bold text-slate-900 leading-none lg:text-2xl"
+                                    id="feature-battery">3.0 kWh</div>
+                                <div class="text-xs text-slate-500 mt-1 lg:text-sm">Battery Capacity</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Thumbnails (desktop: right absolute, mobile: grid below) -->
+                    <div class="mt-8 grid grid-cols-4 gap-2 sm:gap-3 lg:absolute lg:right-0 lg:top-1/2 lg:z-10 lg:mt-0 lg:-translate-y-1/2 lg:grid-cols-1 lg:gap-4"
+                        role="group" aria-label="Choose a scooter model">
+                        <button
+                            class="hero-thumb relative flex h-[80px] flex-col items-center justify-center overflow-hidden rounded-xl border-b-[3px] border-b-slate-900 bg-white/70 p-1 shadow-sm ring-1 ring-black/5 transition-colors hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 sm:h-[100px] lg:h-[90px] lg:w-[120px] lg:border-b-0 lg:border-l-[3px] lg:border-l-slate-900"
+                            type="button" data-slide="0" aria-label="Show Nexus" aria-pressed="true">
+                            <img class="h-full w-full object-contain" src="assets/images/products/nexus/nexus-6.webp"
+                                alt="Nexus Electric Scooter Thumbnail" title="Nexus Electric Scooter Thumbnail"
+                                width="2400" height="1600" loading="lazy">
+                            <span class="sr-only">Nexus</span>
+                        </button>
+                        <button
+                            class="hero-thumb relative flex h-[80px] flex-col items-center justify-center overflow-hidden rounded-xl border-b-[3px] border-b-transparent bg-white/60 p-1 shadow-sm ring-1 ring-black/5 transition-colors hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 sm:h-[100px] lg:h-[90px] lg:w-[120px] lg:border-b-0 lg:border-l-[3px] lg:border-l-transparent"
+                            type="button" data-slide="1" aria-label="Show Magnus" aria-pressed="false">
+                            <img class="h-full w-full object-contain" src="assets/images/products/magnus/magnus-6.webp"
+                                alt="Magnus Electric Scooter Thumbnail" title="Magnus Electric Scooter Thumbnail"
+                                width="2400" height="1600" loading="lazy">
+                            <span class="sr-only">Magnus</span>
+                        </button>
+                        <button
+                            class="hero-thumb relative flex h-[80px] flex-col items-center justify-center overflow-hidden rounded-xl border-b-[3px] border-b-transparent bg-white/60 p-1 shadow-sm ring-1 ring-black/5 transition-colors hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 sm:h-[100px] lg:h-[90px] lg:w-[120px] lg:border-b-0 lg:border-l-[3px] lg:border-l-transparent"
+                            type="button" data-slide="2" aria-label="Show Magnus Neo" aria-pressed="false">
+                            <img class="h-full w-full object-contain"
+                                src="assets/images/products/magnus/magnus-neo/magnus-neo.webp"
+                                alt="Magnus Neo Electric Scooter Thumbnail"
+                                title="Magnus Neo Electric Scooter Thumbnail" width="2000" height="1334" loading="lazy">
+                            <span class="sr-only">Magnus Neo</span>
+                        </button>
+                        <button
+                            class="hero-thumb relative flex h-[80px] flex-col items-center justify-center overflow-hidden rounded-xl border-b-[3px] border-b-transparent bg-white/60 p-1 shadow-sm ring-1 ring-black/5 transition-colors hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 sm:h-[100px] lg:h-[90px] lg:w-[120px] lg:border-b-0 lg:border-l-[3px] lg:border-l-transparent"
+                            type="button" data-slide="3" aria-label="Show Reo" aria-pressed="false">
+                            <img class="h-full w-full object-contain" src="assets/images/products/reo/reo-6.webp"
+                                alt="Reo Electric Scooter Thumbnail" title="Reo Electric Scooter Thumbnail" width="1440"
+                                height="800" loading="lazy">
+                            <span class="sr-only">Reo</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mt-4 min-h-[65px] sm:mt-8" aria-live="polite" aria-atomic="true">
+                    <p class="text-[11px] font-bold uppercase tracking-[.26em] text-slate-500">Featured model</p>
+                    <h2 id="hero-model-name"
+                        class="mt-1 text-2xl font-bold tracking-[-.04em] text-[#111827] sm:text-[30px]">Nexus</h2>
+                </div>
+                <p class="mt-2 text-xs text-slate-500 lg:hidden">Select a model to take a closer look</p>
+            </div>
+        </section>
+
+
+
+        <!-- Our Scooters Grid Section -->
+        <section id="our-scooters" class="py-16 sm:py-24 bg-white overflow-hidden">
+            <div class="mx-auto max-w-[1440px] px-4 sm:px-8">
+                <div class="text-center mb-12 sm:mb-16">
+                    <h2 class="text-3xl font-bold tracking-[-.04em] text-slate-900 sm:text-4xl">Our Scooters</h2>
+                    <p class="mt-4 text-slate-600 sm:text-lg">Discover the perfect electric ride for your daily commute.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                    <!-- Nexus Card -->
+                    <div
+                        class="scooter-card opacity-0 translate-x-12 relative overflow-hidden rounded-[24px] bg-[#f2f3f4] h-[440px] sm:h-[450px] w-full group">
+
+                        <!-- Absolute Text Content -->
+                        <div class="absolute top-10 left-8 sm:top-12 sm:left-10 z-10 w-[70%] sm:w-[65%]">
+                            <h3 class="text-[38px] sm:text-[44px] font-semibold text-black tracking-tight leading-none">
+                                Nexus</h3>
+                            <p class="mt-4 text-[15px] sm:text-[16px] text-[#222] leading-relaxed font-medium pr-2">High
+                                performance urban commute with stunning design.</p>
+                            <div class="mt-6 font-semibold text-xl sm:text-2xl text-black tracking-tight">₹1,09,900
+                            </div>
+                            <a href="#nexus"
+                                class="mt-6 inline-flex items-center text-sm font-medium transition-colors text-[#fa1917] border-b border-[#fa1917]/40 pb-0.5 hover:border-[#fa1917] group/link">
+                                View Details <i
+                                    class="ri-arrow-right-line ml-1 text-base transition-transform group-hover/link:translate-x-1"></i>
+                            </a>
+                        </div>
+
+                        <!-- Absolute Image overlapping bottom right -->
+                        <img src="assets/images/products/nexus/nexus-2.webp"
+                            alt="Ampere Nexus Electric Scooter - Urban Commute" title="Ampere Nexus Electric Scooter"
+                            class="absolute -right-[55%] lg:-right-[55%] -bottom-5 w-[125%] lg:max-w-[550px] max-w-[480px] object-contain transition-transform duration-700 ease-out group-hover:-translate-x-3"
+                            loading="lazy">
+                    </div>
+
+                    <!-- Magnus Card -->
+                    <div
+                        class="scooter-card opacity-0 translate-x-12 relative overflow-hidden rounded-[24px] bg-[#f2f3f4] h-[440px] sm:h-[450px] w-full group">
+                        <!-- Absolute Text Content -->
+                        <div class="absolute top-10 left-8 sm:top-12 sm:left-10 z-10 w-[70%] sm:w-[65%]">
+                            <h3 class="text-[38px] sm:text-[44px] font-semibold text-black tracking-tight leading-none">
+                                Magnus</h3>
+                            <p class="mt-4 text-[15px] sm:text-[16px] text-[#222] leading-relaxed font-medium pr-2">
+                                Perfect balance of power and efficiency for your daily rides.</p>
+                            <div class="mt-6 font-semibold text-xl sm:text-2xl text-black tracking-tight">₹94,900</div>
+                            <a href="#magnus"
+                                class="mt-6 inline-flex items-center text-sm font-medium transition-colors text-[#fa1917] border-b border-[#fa1917]/40 pb-0.5 hover:border-[#fa1917] group/link">
+                                View Details <i
+                                    class="ri-arrow-right-line ml-1 text-base transition-transform group-hover/link:translate-x-1"></i>
+                            </a>
+                        </div>
+
+                        <!-- Absolute Image overlapping bottom right -->
+                        <img src="assets/images/products/magnus/magnus-2.webp"
+                            alt="Ampere Magnus Electric Scooter - Power and Efficiency"
+                            title="Ampere Magnus Electric Scooter"
+                            class="absolute -right-[55%] lg:-right-[55%] -bottom-5 w-[125%] lg:max-w-[550px] max-w-[480px] object-contain transition-transform duration-700 ease-out group-hover:-translate-x-3"
+                            loading="lazy">
+                    </div>
+
+                    <!-- Reo Card -->
+                    <div
+                        class="scooter-card opacity-0 translate-x-12 relative overflow-hidden rounded-[24px] bg-[#f2f3f4] h-[440px] sm:h-[450px] w-full group">
+                        <!-- Absolute Text Content -->
+                        <div class="absolute top-10 left-8 sm:top-12 sm:left-10 z-10 w-[70%] sm:w-[65%]">
+                            <h3 class="text-[38px] sm:text-[44px] font-semibold text-black tracking-tight leading-none">
+                                Reo</h3>
+                            <p class="mt-4 text-[15px] sm:text-[16px] text-[#222] leading-relaxed font-medium pr-2">
+                                Lightweight and agile, designed specifically for city maneuvering.</p>
+                            <div class="mt-6 font-semibold text-xl sm:text-2xl text-black tracking-tight">₹74,900</div>
+                            <a href="#reo"
+                                class="mt-6 inline-flex items-center text-sm font-medium transition-colors text-[#fa1917] border-b border-[#fa1917]/40 pb-0.5 hover:border-[#fa1917] group/link">
+                                View Details <i
+                                    class="ri-arrow-right-line ml-1 text-base transition-transform group-hover/link:translate-x-1"></i>
+                            </a>
+                        </div>
+
+                        <!-- Absolute Image overlapping bottom right -->
+                        <img src="assets/images/products/reo/reo-2.webp"
+                            alt="Ampere Reo Electric Scooter - Lightweight and Agile"
+                            title="Ampere Reo Electric Scooter"
+                            class="absolute -right-[55%] lg:-right-[55%] -bottom-5 w-[125%] lg:max-w-[480px] max-w-[480px] object-contain transition-transform duration-700 ease-out group-hover:-translate-x-3"
+                            loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Why Choose Us / Banner Section -->
+        <section id="why-choose-us" class="w-full overflow-hidden">
+            <div class="relative mx-auto w-full max-w-[1440px] px-4 sm:pe-0 sm:ps-8 z-10">
+
+                <!-- The Card with Background -->
+                <div
+                    class="relative w-full min-h-[950px] lg:min-h-[800px] flex flex-col justify-center overflow-hidden bg-white lg:bg-transparent">
+
+                    <!-- Mobile Background Image -->
+                    <div
+                        class="absolute inset-0 bg-[url('assets/images/banner/why-mobile.webp')] bg-[length:100%_auto] bg-bottom bg-no-repeat lg:hidden z-0  mix-blend-multiply">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-transparent lg:hidden z-0 h-[60%]">
+                    </div>
+
+                    <!-- Desktop Background Image & Overlay -->
+                    <div
+                        class="absolute inset-0 bg-[url('assets/images/banner/reo-banner.webp')] bg-cover bg-right bg-no-repeat hidden lg:block z-0">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-[#ffffff] via-[#ffffff]/90 to-transparent lg:w-[65%] hidden lg:block z-0">
+                    </div>
+
+                    <div class="relative w-full pt-16 pb-[350px] sm:pb-40 lg:pb-32 z-10">
+                        <!-- Main Content -->
+                        <div class="max-w-2xl">
+                            <div class="flex items-center gap-4 mb-6">
+                                <span class="w-8 h-[1px] bg-slate-400"></span>
+                                <span class="text-xs font-bold tracking-[0.2em] text-slate-500 uppercase">Why Choose
+                                    Us</span>
+                            </div>
+
+                            <h2
+                                class="text-4xl sm:text-5xl lg:text-[60px] font-medium text-slate-900 leading-[1.1] tracking-tight mb-6">
+                                A Smarter Way<br>to <span class="font-bold text-[#fa1917]">Move Forward</span>
+                            </h2>
+
+                            <p class="text-lg text-slate-600 mb-10 max-w-lg leading-relaxed">
+                                Experience a cleaner, smarter and more affordable way to commute with our
+                                next-generation electric scooters.
+                            </p>
+
+                            <!-- Features Grid -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-8 gap-x-8 mb-12">
+                                <div class="flex gap-4 items-start group">
+                                    <div
+                                        class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-sm text-slate-700 transition-transform group-hover:scale-110 group-hover:text-[#fa1917]">
+                                        <i class="ri-leaf-line text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-base font-bold text-slate-900">Zero Emissions</h4>
+                                        <p class="text-sm text-slate-500 mt-1">Ride for a cleaner and greener tomorrow.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4 items-start group">
+                                    <div
+                                        class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-sm text-slate-700 transition-transform group-hover:scale-110 group-hover:text-[#fa1917]">
+                                        <i class="ri-flashlight-line text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-base font-bold text-slate-900">Low Running Costs</h4>
+                                        <p class="text-sm text-slate-500 mt-1">Save more with efficient electric power.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4 items-start group">
+                                    <div
+                                        class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-sm text-slate-700 transition-transform group-hover:scale-110 group-hover:text-[#fa1917]">
+                                        <i class="ri-shield-check-line text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-base font-bold text-slate-900">Smart & Reliable</h4>
+                                        <p class="text-sm text-slate-500 mt-1">Built for everyday journeys, rain or
+                                            shine.</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4 items-start group">
+                                    <div
+                                        class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-sm text-slate-700 transition-transform group-hover:scale-110 group-hover:text-[#fa1917]">
+                                        <i class="ri-group-line text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-base font-bold text-slate-900">Perfect for the City</h4>
+                                        <p class="text-sm text-slate-500 mt-1">Agile, stylish and convenient for urban
+                                            life.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="flex flex-wrap items-center gap-8">
+                                <a href="#learn-more"
+                                    class="inline-flex items-center justify-center h-14 px-8 rounded-full bg-[#202020] text-white font-medium hover:bg-black transition-colors group shadow-lg">
+                                    Learn More <i
+                                        class="ri-arrow-right-line ml-2 transition-transform group-hover:translate-x-1"></i>
+                                </a>
+                                <a href="#watch-video"
+                                    class="inline-flex items-center gap-4 text-slate-900 font-medium hover:text-[#fa1917] transition-colors group">
+                                    <span
+                                        class="flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md group-hover:shadow-xl transition-all group-hover:scale-105">
+                                        <i
+                                            class="ri-play-fill text-2xl ml-1 text-slate-800 group-hover:text-[#fa1917]"></i>
+                                    </span>
+                                    Watch Video
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Service & Support Bento Section -->
+        <section id="services" class="py-16 sm:py-24 bg-white overflow-hidden">
+            <div class="mx-auto max-w-[1440px] px-4 sm:px-8">
+
+                <!-- Top Header Area -->
+                <div class="flex flex-col items-center text-center mb-12 sm:mb-16">
+                    <div class="flex items-center justify-center gap-4 mb-6">
+                        <span class="w-8 h-[1px] bg-slate-400"></span>
+                        <span class="text-xs font-bold tracking-[0.2em] text-slate-500 uppercase">Service &
+                            Support</span>
+                        <span class="w-8 h-[1px] bg-slate-400"></span>
+                    </div>
+                    <h2
+                        class="text-2xl sm:text-4xl lg:text-5xl font-semibold text-slate-900 !leading-[1.25] tracking-tight mb-4 max-w-3xl mx-auto">
+                        Every Ride Backed<br class="hidden sm:block"> by Expert Care.
+                    </h2>
+                    <p class="text-lg text-slate-600 leading-relaxed max-w-xl mx-auto">
+                        From routine check-ups to expert support, we ensure your scooter stays in top condition —
+                        wherever you go.
+                    </p>
+                </div>
+
+                <!-- Bento Grid -->
+                <div class="grid grid-cols-1 xl:grid-cols-3 gap-6 lg:gap-8">
+
+                    <!-- Left side (Span 2) -->
+                    <div class="xl:col-span-2 flex flex-col gap-6 lg:gap-8">
+
+                        <!-- Top 3 small cards -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 flex-1">
+                            <!-- Card 1 -->
+                            <div
+                                class="service-card bg-[#f2f3f4] rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col relative group border border-slate-100 hover:border-[#fa1917]/20 hover:shadow-md transition-all">
+                                <div
+                                    class="w-16 h-16 rounded-2xl border border-slate-200 bg-white shadow-sm flex items-center justify-center text-3xl mb-12 group-hover:bg-[#fa1917] group-hover:text-white group-hover:border-[#fa1917] transition-colors">
+                                    <i
+                                        class="ri-tools-line text-slate-700 group-hover:text-white transition-colors"></i>
+                                </div>
+                                <h4 class="text-3xl font-bold text-slate-900 mb-2 mt-auto">400+</h4>
+                                <p class="text-[10px] font-semibold text-slate-500 uppercase mb-4">Service Touchpoints
+                                </p>
+                                <p class="text-sm text-slate-500 leading-relaxed font-medium">Easily find a service
+                                    center near you.</p>
+                            </div>
+                            <!-- Card 2 -->
+                            <div
+                                class="service-card bg-[#f2f3f4] rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col relative group border border-slate-100 hover:border-[#fa1917]/20 hover:shadow-md transition-all">
+                                <div
+                                    class="w-16 h-16 rounded-2xl border border-slate-200 bg-white shadow-sm flex items-center justify-center text-3xl mb-12 group-hover:bg-[#fa1917] group-hover:text-white group-hover:border-[#fa1917] transition-colors">
+                                    <i
+                                        class="ri-customer-service-2-line text-slate-700 group-hover:text-white transition-colors"></i>
+                                </div>
+                                <h4 class="text-3xl font-bold text-slate-900 mb-2 mt-auto">24 × 7</h4>
+                                <p class="text-[10px] font-semibold text-slate-500 uppercase mb-4">Roadside Assistance
+                                </p>
+                                <p class="text-sm text-slate-500 leading-relaxed font-medium">Help on the road, anytime
+                                    you need.</p>
+                            </div>
+                            <!-- Card 3 -->
+                            <div
+                                class="service-card bg-[#f2f3f4] rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col relative group border border-slate-100 hover:border-[#fa1917]/20 hover:shadow-md transition-all">
+                                <div
+                                    class="w-16 h-16 rounded-2xl border border-slate-200 bg-white shadow-sm flex items-center justify-center text-3xl mb-12 group-hover:bg-[#fa1917] group-hover:text-white group-hover:border-[#fa1917] transition-colors">
+                                    <i class="ri-team-line text-slate-700 group-hover:text-white transition-colors"></i>
+                                </div>
+                                <h4 class="text-3xl font-bold text-slate-900 mb-2 mt-auto">12 × 7</h4>
+                                <p class="text-[10px] font-semibold text-slate-500 uppercase mb-4">Expert Technicians
+                                </p>
+                                <p class="text-sm text-slate-500 leading-relaxed font-medium">Trained professionals who
+                                    know your scooter inside out.</p>
+                            </div>
+                        </div>
+
+                        <!-- Bottom large card -->
+                        <div class="service-card rounded-3xl overflow-hidden relative min-h-[380px] bg-slate-900 group">
+                            <img src="assets/images/service/ser-2.webp" alt="Genuine Parts"
+                                class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-r from-[#111] via-[#111]/80 to-transparent">
+                            </div>
+
+                            <div class="relative h-full flex flex-col justify-end p-8 sm:p-12 z-10 max-w-md">
+                                <p class="text-[10px] font-bold tracking-[0.2em] text-slate-400 uppercase mb-4">Genuine
+                                    Parts</p>
+                                <h3
+                                    class="text-3xl sm:text-4xl lg:text-4xl font-semibold text-white leading-[1.1] mb-6 tracking-tight">
+                                    Original Parts for Lasting Performance.</h3>
+                                <p class="text-sm text-slate-300 mb-8 leading-relaxed max-w-sm">We use genuine parts to
+                                    keep your scooter running smoothly, efficiently and for years to come.</p>
+
+                                <a href="#parts"
+                                    class="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center hover:bg-[#fa1917] hover:text-white transition-colors">
+                                    <i class="ri-arrow-right-line text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right side (Span 1) -->
+                    <div class="xl:col-span-1 flex flex-col gap-6 lg:gap-8">
+
+                        <!-- Top large image card -->
+                        <div
+                            class="service-card rounded-3xl overflow-hidden relative flex-1 min-h-[350px] group bg-white shadow-sm border border-slate-100">
+                            <img src="assets/images/service/ser-1.webp" alt="Service Center"
+                                class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+
+                        </div>
+
+                        <!-- Bottom single card with nav scooty image -->
+                        <div
+                            class="service-card rounded-3xl overflow-hidden relative min-h-[224px] bg-[#f2f3f4] group flex flex-col shadow-sm border border-slate-100">
+                            <div class="absolute inset-0 w-full h-full overflow-hidden">
+                                <img src="assets/images/nav/menu-scooty.webp" alt="Warranty"
+                                    class="absolute -right-8 -bottom-4 w-[45%] object-contain object-bottom group-hover:scale-105 transition-transform duration-500 origin-bottom-right drop-shadow-xl"
+                                    loading="lazy">
+                            </div>
+                            <div class="relative z-10 p-6 sm:p-8 flex flex-col h-full w-2/3">
+                                <div
+                                    class="w-10 h-10 rounded-xl border border-slate-200 bg-white/80 backdrop-blur-sm flex items-center justify-center text-lg mb-6 shadow-sm">
+                                    <i class="ri-shield-check-line text-slate-700"></i>
+                                </div>
+                                <h4 class="text-3xl font-bold text-slate-900 mb-1 tracking-tight">5 Years</h4>
+                                <p class="text-[10px] font-bold tracking-[0.2em] text-slate-500 uppercase mb-2">Extended
+                                    Warranty</p>
+                                <p class="text-xs text-slate-500 leading-relaxed mt-auto font-medium">Built to go the
+                                    distance with absolute confidence.</p>
+                            </div>
+                            <div
+                                class="absolute top-6 right-6 w-8 h-8 rounded-full border border-slate-200 bg-white/80 backdrop-blur-sm flex items-center justify-center text-slate-400 group-hover:text-[#fa1917] group-hover:border-[#fa1917] group-hover:text-white transition-colors z-10 cursor-pointer">
+                                <i class="ri-arrow-right-line text-sm"></i>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-16 sm:py-24 bg-[#f8f9fa]">
+            <div class="mx-auto max-w-[1000px] px-4 sm:px-8">
+                <div class="flex flex-col items-center text-center mb-12 sm:mb-16">
+                    <div class="flex items-center justify-center gap-4 mb-6">
+                        <span class="w-8 h-[1px] bg-slate-400"></span>
+                        <span class="text-xs font-bold tracking-[0.2em] text-slate-500 uppercase">Got Questions?</span>
+                        <span class="w-8 h-[1px] bg-slate-400"></span>
+                    </div>
+                    <h2
+                        class="text-2xl sm:text-4xl lg:text-5xl font-semibold text-slate-900 !leading-[1.25] tracking-tight mb-4 max-w-3xl mx-auto">
+                        Frequently Asked Questions
+                    </h2>
+                    <p class="text-lg text-slate-600 leading-relaxed max-w-xl mx-auto">
+                        Find quick answers to common questions about our electric scooters, charging, and support.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-white rounded-3xl p-3 sm:p-6 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-100 space-y-3 max-w-4xl mx-auto">
+                    <!-- FAQ 1 -->
+                    <div class="faq-item bg-[#f8f9fa] rounded-2xl overflow-hidden transition-all duration-300">
+                        <button
+                            class="faq-button w-full flex items-center justify-between p-5 sm:p-6 text-left focus:outline-none group">
+                            <span class="text-[15px] sm:text-[17px] font-medium text-slate-900 pr-4">What is the average
+                                range of Ampere electric scooters?</span>
+                            <span
+                                class="faq-icon flex-shrink-0 w-8 h-8 rounded-lg bg-white border border-slate-200 shadow-sm flex items-center justify-center text-slate-600 transition-colors group-hover:border-slate-300">
+                                <i class="ri-add-line text-sm transition-transform duration-300"></i>
+                            </span>
+                        </button>
+                        <div class="faq-content px-5 sm:px-6 pb-5 sm:pb-6 text-slate-500 leading-relaxed text-sm"
+                            style="display: none;">
+                            Our Ampere electric scooters offer excellent range for daily commuting. For instance, the
+                            Ampere Nexus delivers up to 136 km on a single charge, while the Magnus EX offers a
+                            certified range of 100+ km. Real-world range may vary slightly based on riding conditions
+                            and payload.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="faq-item bg-[#f8f9fa] rounded-2xl overflow-hidden transition-all duration-300">
+                        <button
+                            class="faq-button w-full flex items-center justify-between p-5 sm:p-6 text-left focus:outline-none group">
+                            <span class="text-[15px] sm:text-[17px] font-medium text-slate-900 pr-4">How long does it
+                                take to charge the battery?</span>
+                            <span
+                                class="faq-icon flex-shrink-0 w-8 h-8 rounded-lg bg-white border border-slate-200 shadow-sm flex items-center justify-center text-slate-600 transition-colors group-hover:border-slate-300">
+                                <i class="ri-add-line text-sm transition-transform duration-300"></i>
+                            </span>
+                        </button>
+                        <div class="faq-content px-5 sm:px-6 pb-5 sm:pb-6 text-slate-500 leading-relaxed text-sm"
+                            style="display: none;">
+                            Most of our electric scooters feature fast and efficient charging. Typically, it takes
+                            around 3 to 5 hours to charge the battery from 0% to 100% using the standard home charger
+                            provided. You can easily plug it in at your home or office just like a smartphone.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="faq-item bg-[#f8f9fa] rounded-2xl overflow-hidden transition-all duration-300">
+                        <button
+                            class="faq-button w-full flex items-center justify-between p-5 sm:p-6 text-left focus:outline-none group">
+                            <span class="text-[15px] sm:text-[17px] font-medium text-slate-900 pr-4">Do I need a license
+                                and registration to ride these scooters?</span>
+                            <span
+                                class="faq-icon flex-shrink-0 w-8 h-8 rounded-lg bg-white border border-slate-200 shadow-sm flex items-center justify-center text-slate-600 transition-colors group-hover:border-slate-300">
+                                <i class="ri-add-line text-sm transition-transform duration-300"></i>
+                            </span>
+                        </button>
+                        <div class="faq-content px-5 sm:px-6 pb-5 sm:pb-6 text-slate-500 leading-relaxed text-sm"
+                            style="display: none;">
+                            High-speed models like the Ampere Nexus and Magnus EX require a valid two-wheeler driving
+                            license and RTO registration. However, low-speed models (top speed capped at 25 km/h) do not
+                            require a license or registration to ride, making them perfect for teenagers and short
+                            commutes.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="faq-item bg-[#f8f9fa] rounded-2xl overflow-hidden transition-all duration-300">
+                        <button
+                            class="faq-button w-full flex items-center justify-between p-5 sm:p-6 text-left focus:outline-none group">
+                            <span class="text-[15px] sm:text-[17px] font-medium text-slate-900 pr-4">What is the
+                                warranty provided on the scooters and battery?</span>
+                            <span
+                                class="faq-icon flex-shrink-0 w-8 h-8 rounded-lg bg-white border border-slate-200 shadow-sm flex items-center justify-center text-slate-600 transition-colors group-hover:border-slate-300">
+                                <i class="ri-add-line text-sm transition-transform duration-300"></i>
+                            </span>
+                        </button>
+                        <div class="faq-content px-5 sm:px-6 pb-5 sm:pb-6 text-slate-500 leading-relaxed text-sm"
+                            style="display: none;">
+                            We provide a standard 3-year warranty on both the vehicle and the battery. Additionally, you
+                            can opt for an extended warranty package that covers your battery and essential components
+                            for up to 5 years, giving you complete peace of mind.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="faq-item bg-[#f8f9fa] rounded-2xl overflow-hidden transition-all duration-300">
+                        <button
+                            class="faq-button w-full flex items-center justify-between p-5 sm:p-6 text-left focus:outline-none group">
+                            <span class="text-[15px] sm:text-[17px] font-medium text-slate-900 pr-4">Are financing and
+                                EMI options available?</span>
+                            <span
+                                class="faq-icon flex-shrink-0 w-8 h-8 rounded-lg bg-white border border-slate-200 shadow-sm flex items-center justify-center text-slate-600 transition-colors group-hover:border-slate-300">
+                                <i class="ri-add-line text-sm transition-transform duration-300"></i>
+                            </span>
+                        </button>
+                        <div class="faq-content px-5 sm:px-6 pb-5 sm:pb-6 text-slate-500 leading-relaxed text-sm"
+                            style="display: none;">
+                            Yes! We have partnered with leading banks and financial institutions to offer hassle-free
+                            financing options. You can easily get an EV loan with low interest rates and flexible EMI
+                            tenures customized to your budget right at our dealership.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="electric-scooters" class="bg-white hidden px-5 py-16 text-center sm:py-20"
+            aria-labelledby="models-title">
+            <div class="mx-auto max-w-[1000px]">
+                <div class="flex flex-col items-center text-center mb-8 sm:mb-12">
+                    <div class="flex items-center justify-center gap-4 mb-6">
+                        <span class="w-8 h-[1px] bg-slate-400"></span>
+                        <span class="text-xs font-bold tracking-[0.2em] text-slate-500 uppercase">Explore the
+                            range</span>
+                        <span class="w-8 h-[1px] bg-slate-400"></span>
+                    </div>
+                    <h2 id="models-title"
+                        class="text-2xl sm:text-4xl lg:text-5xl font-semibold text-slate-900 !leading-[1.25] tracking-tight mb-4 max-w-3xl mx-auto">
+                        See every detail,<br class="hidden sm:block"> from every angle.
+                    </h2>
+                    <p class="text-lg text-slate-600 leading-relaxed max-w-xl mx-auto">
+                        Take an interactive 360° look at the Nexus and Magnus models.
+                    </p>
+                </div>
+                <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                    <a href="360.html?model=nexus"
+                        class="inline-flex min-h-12 w-56 items-center justify-center gap-2 rounded-full bg-slate-900 px-6 font-semibold text-white transition-colors hover:bg-slate-700">View
+                        Nexus 360 <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+                    <a href="360.html?model=magnus"
+                        class="inline-flex min-h-12 w-56 items-center justify-center gap-2 rounded-full border border-slate-300 px-6 font-semibold text-slate-900 transition-colors hover:bg-slate-100">View
+                        Magnus 360 <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+    <footer class="relative w-full overflow-hidden pt-20 sm:pt-32 bg-slate-950">
+
+        <!-- Background Image for the whole footer -->
+        <div
+            class="absolute inset-0 bg-[url('assets/images/banner/footer-bg.webp')] bg-cover bg-center bg-no-repeat z-0">
+        </div>
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-black/80 z-0"></div>
+        <div
+            class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-[#11141a] z-0 pointer-events-none">
+        </div>
+
+        <div
+            class="relative z-10 mx-auto max-w-[1440px] px-6 sm:px-12 flex flex-col lg:flex-row justify-between gap-12 lg:gap-16 mb-8 sm:mb-16 lg:mb-24">
+
+            <!-- Col 1: Brand & Socials -->
+            <div class="flex flex-col gap-8 max-w-xs">
+                <div class="flex items-center gap-3 text-white">
+                    <img src="assets/images/logo/main-logo.png" alt="Maa Manasha EV" class="h-8 brightness-0 invert">
+                    <span class="text-2xl font-black tracking-tight">Maa Manasha EV</span>
+                </div>
+                <p class="text-[15px] text-slate-400 leading-relaxed font-medium">
+                    Premium electric scooters, expert service, and everything you need to fuel your next ride with
+                    confidence and style.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#"
+                        class="w-11 h-11 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white hover:bg-[#fa1917] hover:border-[#fa1917] hover:scale-105 transition-all shadow-sm">
+                        <i class="ri-mail-line text-lg"></i>
+                    </a>
+                    <a href="#"
+                        class="w-11 h-11 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white hover:bg-[#fa1917] hover:border-[#fa1917] hover:scale-105 transition-all shadow-sm">
+                        <i class="ri-linkedin-fill text-lg"></i>
+                    </a>
+                    <a href="#"
+                        class="w-11 h-11 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white hover:bg-[#fa1917] hover:border-[#fa1917] hover:scale-105 transition-all shadow-sm">
+                        <i class="ri-twitter-x-line text-lg"></i>
+                    </a>
+                    <a href="#"
+                        class="w-11 h-11 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white hover:bg-[#fa1917] hover:border-[#fa1917] hover:scale-105 transition-all shadow-sm">
+                        <i class="ri-instagram-line text-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Links Container -->
+            <div class="flex flex-col sm:flex-row flex-wrap gap-10 sm:gap-16 lg:gap-24 lg:mr-12 text-white">
+                <!-- Col 2: Quick Links -->
+                <div class="flex flex-col gap-7">
+                    <h4 class="text-lg font-bold tracking-tight text-white">All Pages</h4>
+                    <ul class="flex flex-col gap-4">
+                        <li><a href="#home"
+                                class="text-[15px] text-slate-400 hover:text-white transition-colors font-bold">Home</a>
+                        </li>
+                        <li><a href="#electric-scooters"
+                                class="text-[15px] text-slate-400 hover:text-white transition-colors font-bold">Electric
+                                Scooters</a></li>
+                        <li><a href="#about-us"
+                                class="text-[15px] text-slate-400 hover:text-white transition-colors font-bold">About
+                                Us</a></li>
+                        <li><a href="#services"
+                                class="text-[15px] text-slate-400 hover:text-white transition-colors font-bold">Services</a>
+                        </li>
+                        <li><a href="#service-booking"
+                                class="text-[15px] text-slate-400 hover:text-white transition-colors font-bold">Service
+                                Booking</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Models -->
+                <div class="flex flex-col gap-7">
+                    <h4 class="text-lg font-bold tracking-tight text-white">Models</h4>
+                    <ul class="flex flex-col gap-4">
+                        <li><a href="#"
+                                class="text-[15px] text-slate-400 hover:text-white transition-colors font-bold">Ampere
+                                Nexus</a></li>
+                        <li><a href="#"
+                                class="text-[15px] text-slate-400 hover:text-white transition-colors font-bold">Magnus
+                                EX</a></li>
+                        <li><a href="#"
+                                class="text-[15px] text-slate-400 hover:text-white transition-colors font-bold">Reo Li
+                                Plus</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact Info -->
+                <div class="flex flex-col gap-7">
+                    <h4 class="text-lg font-bold tracking-tight text-white">Contact Info</h4>
+                    <ul class="flex flex-col gap-5">
+                        <li class="flex items-center gap-5 group cursor-pointer">
+                            <span
+                                class="w-11 h-11 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white shrink-0 group-hover:bg-[#fa1917] group-hover:border-[#fa1917] transition-colors shadow-sm">
+                                <i class="ri-mail-line text-lg"></i>
+                            </span>
+                            <a href="mailto:info@maamanasaev.com"
+                                class="text-[15px] text-slate-400 group-hover:text-white transition-colors font-bold">info@maamanasaev.com</a>
+                        </li>
+                        <li class="flex items-center gap-5 group cursor-pointer">
+                            <span
+                                class="w-11 h-11 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white shrink-0 group-hover:bg-[#fa1917] group-hover:border-[#fa1917] transition-colors shadow-sm">
+                                <i class="ri-phone-line text-lg"></i>
+                            </span>
+                            <a href="tel:+919876543210"
+                                class="text-[15px] text-slate-400 group-hover:text-white transition-colors font-bold">+91
+                                98765 43210</a>
+                        </li>
+                        <li class="flex items-center gap-5 group cursor-pointer">
+                            <span
+                                class="w-11 h-11 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white shrink-0 group-hover:bg-[#fa1917] group-hover:border-[#fa1917] transition-colors shadow-sm">
+                                <i class="ri-map-pin-line text-lg"></i>
+                            </span>
+                            <span
+                                class="text-[15px] text-slate-400 font-bold group-hover:text-white transition-colors">Kolkata,
+                                West Bengal</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Huge Text Area -->
+        <div
+            class="relative w-full max-w-[1440px] mx-auto h-[80px] sm:h-[180px] lg:h-[400px] flex items-center justify-center overflow-hidden z-10">
+            <!-- Normal Big Text with Gradient -->
+            <div class="absolute w-full flex justify-center items-center pointer-events-none select-none z-10 px-4">
+                <h2
+                    class="text-[9vw] sm:text-[11vw] md:text-[11vw] lg:text-[140px] xl:text-[170px] font-bold leading-none text-center whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-b from-white/20 to-white/5 mix-blend-overlay w-full">
+                    MAA MANASHA
+                </h2>
+            </div>
+        </div>
+
+        <!-- Dark Bottom Bar -->
+        <div
+            class="relative w-full bg-[#0a0c10] z-40 rounded-tl-xl rounded-tr-xl sm:rounded-tl-[40px] sm:rounded-tr-[40px] border-t border-white/5 shadow-[0_-10px_40px_rgba(0,0,0,0.5)] -mt-4">
+            <div class="mx-auto max-w-[1440px] px-6 sm:px-12 py-6 sm:py-8 flex items-center justify-center">
+                <p class="text-xs sm:text-sm text-white/50 text-center">Copyright &copy; 2026 Maa Manasha EV. All rights
+                    reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- SplitType -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.0.2/split.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Lenis -->
+    <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Custom Script -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

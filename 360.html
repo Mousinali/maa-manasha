@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360° View | Maa Manasha EV</title>
+<style>
+    /* Hide the 360 view entirely on tablets and mobile */
+    @media (max-width: 1024px) {
+        #scooter360, #loading-text, #mobile-fallback-message {
+            display: none !important;
+        }
+        /* Show a fallback message on mobile if desired (optional) */
+        #mobile-fallback-message {
+            display: block !important;
+            font-family: sans-serif;
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+        }
+    }
+
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        /* Static background color matching the home page */
+        background-color: #DDDFE2; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #scooter360 {
+        touch-action: none; 
+        width: 100vw;
+        height: 80vh;
+        object-fit: contain;
+        cursor: grab;
+        display: block;
+    }
+    #scooter360:active {
+        cursor: grabbing;
+    }
+    
+    #mobile-fallback-message {
+        display: none;
+    }
+</style>
+</head>
+<body>
+    <video id="scooter360"
+       preload="auto"
+       muted
+       playsinline
+       webkit-playsinline>
+</video>
+<h1 id="loading-text">Loading 360 View...</h1>
+<div id="mobile-fallback-message">360 View is only available on Desktop</div>
+
+<script>
+const video = document.getElementById("scooter360");
+const loadingText = document.getElementById("loading-text");
+
+// Get the model from the URL (defaults to 'nexus' if none provided)
+const urlParams = new URLSearchParams(window.location.search);
+const model = urlParams.get('model') || 'nexus';
+const videoUrl = `assets/videos/${model}-360.mp4`;
+
+// Update UI to reflect the loading model
+loadingText.innerText = `Loading ${model.charAt(0).toUpperCase() + model.slice(1)} 360 View...`;
+
+// Only run the 360 logic and download the video if on Desktop (width > 1024px)
+if (window.innerWidth > 1024) {
+
+    // Fetch the video as a Blob to bypass iOS HTTP Range Request requirements
+    // and force the entire video into memory for maximum smoothness!
+    fetch(videoUrl)
+      .then(response => {
+          if (!response.ok) throw new Error("Video not found");
+          return response.blob();
+      })
+      .then(blob => {
+        const blobUrl = URL.createObjectURL(blob);
+        video.src = blobUrl;
+        loadingText.style.display = "none";
+      })
+      .catch(err => {
+        loadingText.innerText = "Error loading video.";
+        console.error(err);
+      });
+
+    let dragging = false;
+    let startX = 0;
+    let startTime = 0;
+
+    // For looping and smooth lerping
+    let targetTime = 0;
+    let currentVisualTime = 0; 
+    let isSeeking = false;
+
+    // Continuous render loop for buttery smooth momentum
+    function renderLoop() {
+      if (video.duration) {
+        // Lerp (Linear Interpolation) to glide smoothly to the target
+        let diff = targetTime - currentVisualTime;
+        
+        // Handle the wraparound for the shortest path when looping
+        if (diff > video.duration / 2) {
+          diff -= video.duration;
+        } else if (diff < -video.duration / 2) {
+          diff += video.duration;
+        }
+        
+        // Move 15% of the distance to the target each frame
+        currentVisualTime += diff * 0.15;
+        
+        // Normalize current time to always be within 0 and duration
+        let normalizedTime = ((currentVisualTime % video.duration) + video.duration) % video.duration;
+        
+        // Update video time if it has changed significantly and we aren't currently seeking
+        if (Math.abs(video.currentTime - normalizedTime) > 0.01 && !isSeeking) {
+          isSeeking = true;
+          video.currentTime = normalizedTime;
+        }
+      }
+      
+      requestAnimationFrame(renderLoop);
+    }
+
+    // Start the loop once video metadata is loaded
+    video.addEventListener('loadedmetadata', () => {
+        // Nudge currentTime slightly to force iOS Safari to render the first frame
+        video.currentTime = 0.001;
+        targetTime = video.currentTime;
+        currentVisualTime = video.currentTime;
+        requestAnimationFrame(renderLoop);
+    });
+
+    video.addEventListener("seeked", () => {
+      isSeeking = false;
+    });
+
+    video.addEventListener("pointerdown", (e) => {
+      dragging = true;
+      startX = e.clientX;
+      startTime = targetTime;
+
+      video.setPointerCapture(e.pointerId);
+    });
+
+    video.addEventListener("pointermove", (e) => {
+      if (!dragging || !video.duration) return;
+
+      const movement = e.clientX - startX;
+      
+      // Adjust sensitivity here (higher denominator = slower rotation)
+      const secondsPerPixel = video.duration / 800; 
+
+      targetTime = startTime - (movement * secondsPerPixel);
+    });
+
+    video.addEventListener("pointerup", () => {
+      dragging = false;
+    });
+
+}
+</script>
+</body>
+</html>
